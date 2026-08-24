@@ -1,0 +1,8 @@
+{
+  "name": "invtool",
+  "private": true,
+  "version": "1.0.0",
+  "description": "UEFN persistence studio",
+  "scripts": {"start":"node server.js"},
+  "engines": {"node": ">=18"}
+}

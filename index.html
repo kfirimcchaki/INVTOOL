@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070b13" />
+  <title>INVTOOL — Persistence Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">✦</span><span>INV<span>TOOL</span></span><small>UEFN PERSISTENCE STUDIO</small></div>
+      <div class="workspace-label">WORKSPACE</div>
+      <button class="nav active" data-view="overview"><i>⌂</i> Overview</button>
+      <button class="nav" data-view="inventory"><i>▦</i> Inventory Editor <b>12</b></button>
+      <button class="nav" data-view="assets"><i>⌕</i> Asset Browser</button>
+      <button class="nav" data-view="maps"><i>◈</i> My Islands</button>
+      <div class="sidebar-bottom">
+        <div class="connection-card"><span class="status-dot"></span><div><strong id="connection-title">Not connected</strong><small id="connection-copy">Token stays in this browser</small></div></div>
+        <button class="nav" data-view="settings"><i>⚙</i> Settings</button>
+        <div class="profile"><div class="avatar">U</div><div><strong>Creator</strong><small>Local workspace</small></div><button id="logout" title="Clear session">↪</button></div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="crumb"><span>Workspace</span><b>/</b><strong id="page-name">Overview</strong></div><div class="top-actions"><button class="icon-btn" title="Help">?</button><button class="outline-btn" id="connect-open">Connect service <span>↗</span></button></div></header>
+      <section class="content" id="app"></section>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <div class="modal-backdrop" id="modal"><div class="modal"><button class="close" id="modal-close">×</button><div class="modal-icon">⌁</div><h2>Connect your content service</h2><p>Paste a session token to load islands from the configured UEFN content service. Your token is stored only in this browser session and is never committed or sent anywhere else by INVTOOL.</p><label>Service endpoint<input id="endpoint" value="https://content-service.bfda.live.use1a.on.epicgames.com" /></label><label>Session token<input id="token" type="password" placeholder="Paste token here…" autocomplete="off" /></label><div class="modal-note">⚠ Use tokens only from a trusted session. This demo has safe local mock data until an endpoint is configured.</div><button class="primary full" id="connect">Connect & load islands <span>→</span></button></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
