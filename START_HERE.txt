@@ -1,0 +1,17 @@
+INVTOOL — EASY LOCAL START
+===========================
+
+Windows:
+1. Install Node.js 18+ from https://nodejs.org/
+2. Double-click run.bat
+3. Your browser opens at http://localhost:4173
+
+macOS / Linux:
+1. Install Node.js 18+ from https://nodejs.org/
+2. Open a terminal in this folder
+3. Run: chmod +x run.sh
+4. Run: ./run.sh
+
+Stop the app with Ctrl+C in the terminal window.
+
+The local app includes the secure same-origin proxy and keeps session tokens in memory only.
